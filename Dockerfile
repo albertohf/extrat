@@ -17,6 +17,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Configurar diretório de trabalho
 WORKDIR /app
 
+# Instalar wheel e python-multipart
+RUN pip install --no-cache-dir wheel python-multipart
+
 # Copiar requisitos e instalar dependências
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
