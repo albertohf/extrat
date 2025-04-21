@@ -5,7 +5,7 @@ import cv2
 import io
 
 # Caminho para o executável do Tesseract (ajuste para seu sistema)
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
 
 def preprocess_image(image_bytes: bytes) -> Image.Image:
     # Abrir imagem
